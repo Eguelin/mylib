@@ -6,9 +6,11 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 17:02:39 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/20 17:03:38 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/02/21 17:40:22 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "mylib.h"
 
 void	ft_free_split(char **tab)
 {
