@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:07:18 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:24:32 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:16:44 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	pos_h;
-	size_t	pos_n;
+	size_t	i;
+	size_t	j;
 
-	pos_h = 0;
-	while (pos_h < len && haystack[pos_h])
+	i = 0;
+	while (i < len && haystack[i])
 	{
-		pos_n = 0;
-		while (pos_h + pos_n < len && haystack[pos_h + pos_n] == needle[pos_n] \
-		&& needle[pos_n])
-			pos_n++;
-		if (!needle[pos_n])
-			return ((char *)(haystack + pos_h));
-		pos_h++;
+		j = 0;
+		while (i + j < len && haystack[i + j] == needle[j] \
+		&& needle[j])
+			j++;
+		if (!needle[j])
+			return ((char *)(haystack + i));
+		i++;
 	}
-	if (!pos_h && !ft_strlen(needle))
+	if (!i && !ft_strlen(needle))
 		return ((char *)(haystack));
 	return (NULL);
 }

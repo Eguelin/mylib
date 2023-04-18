@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 17:38:13 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:24:06 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:15:06 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	pos;
+	size_t	i;
 
 	if (!s || !f)
 		return ;
-	pos = 0;
-	while (s[pos])
+	i = 0;
+	while (s[i])
 	{
-		(*f)(pos, s + pos);
-		pos++;
+		(*f)(i, s + i);
+		i++;
 	}
 }

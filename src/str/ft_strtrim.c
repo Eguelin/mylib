@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:18:34 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:24:40 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:17:07 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ static int		ft_test_set(char c, char const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	pos;
+	size_t	i;
 	size_t	start;
 	size_t	end;
 	char	*s2;
 
-	pos = 0;
+	i = 0;
 	if (!s1 || !set)
 		return (NULL);
 	start = ft_start(s1, set);
@@ -33,47 +33,47 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s2 = malloc(end - start + 2);
 	if (!s2)
 		return (NULL);
-	pos = 0;
+	i = 0;
 	while (start < end + 1)
 	{
-		s2[pos] = s1[start];
+		s2[i] = s1[start];
 		start++;
-		pos++;
+		i++;
 	}
-	s2[pos] = 0;
+	s2[i] = 0;
 	return (s2);
 }
 
 static size_t	ft_start(char const *s1, char const *set)
 {
-	size_t	pos;
+	size_t	i;
 
-	pos = 0;
-	while (ft_test_set(s1[pos], set) && s1[pos])
-		pos++;
-	return (pos);
+	i = 0;
+	while (ft_test_set(s1[i], set) && s1[i])
+		i++;
+	return (i);
 }
 
 static size_t	ft_end(char const *s1, char const *set)
 {
-	size_t	pos;
+	size_t	i;
 
-	pos = ft_strlen(s1) - 1;
-	while (ft_test_set(s1[pos], set) && pos)
-		pos--;
-	return (pos);
+	i = ft_strlen(s1) - 1;
+	while (ft_test_set(s1[i], set) && i)
+		i--;
+	return (i);
 }
 
 static int	ft_test_set(char c, char const *set)
 {
-	size_t	pos;
+	size_t	i;
 
-	pos = 0;
-	while (set[pos])
+	i = 0;
+	while (set[i])
 	{
-		if (set[pos] == c)
+		if (set[i] == c)
 			return (1);
-		pos++;
+		i++;
 	}
 	return (0);
 }

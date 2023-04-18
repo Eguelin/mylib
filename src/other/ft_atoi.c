@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 19:40:55 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:23:13 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:13:54 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,28 +21,28 @@ static int	check_neg(int neg)
 
 int	ft_atoi(const char *str)
 {
-	size_t	pos;
+	size_t	i;
 	long	somme;
 	int		neg;
 
-	pos = 0;
+	i = 0;
 	neg = 1;
 	somme = 0;
-	while (str[pos] == 32 || (str[pos] >= 9 && str[pos] <= 13))
-		pos++;
-	if (str[pos] == '-')
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
 	{
 		neg *= -1;
-		pos++;
+		i++;
 	}
-	else if (str[pos] == '+')
-		pos++;
-	while ((str[pos] >= 48 && str[pos] <= 57))
+	else if (str[i] == '+')
+		i++;
+	while ((str[i] >= 48 && str[i] <= 57))
 	{
-		if (somme != (somme * 10 + (str[pos] - '0')) / 10)
+		if (somme != (somme * 10 + (str[i] - '0')) / 10)
 			return (check_neg(neg));
-		somme = somme * 10 + (str[pos] - '0');
-		pos++;
+		somme = somme * 10 + (str[i] - '0');
+		i++;
 	}
 	return (somme * neg);
 }

@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:26:15 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:22:54 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:13:23 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	pos;
+	size_t	i;
 
-	pos = 0;
+	i = 0;
 	if (dst > src)
 	{
-		while (pos < len)
+		while (i < len)
 		{
 			((unsigned char *)dst)[len - 1] = ((unsigned char *)src)[len - 1];
 			len--;

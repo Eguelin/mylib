@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:18:32 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:22:51 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:13:18 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	pos;
+	size_t	i;
 
-	pos = 0;
+	i = 0;
 	if (!dst && !src)
 		return (dst);
-	while (pos < n)
+	while (i < n)
 	{
-		((unsigned char *)dst)[pos] = ((const unsigned char *)src)[pos];
-		pos++;
+		((unsigned char *)dst)[i] = ((const unsigned char *)src)[i];
+		i++;
 	}
 	return (dst);
 }

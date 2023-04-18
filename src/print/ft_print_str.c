@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:22:47 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:20:58 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:14:37 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_print_str(const char *s)
 {
-	int	pos;
+	int	i;
 
-	pos = 0;
-	while (s[pos])
+	i = 0;
+	while (s[i])
 	{
-		ft_print_char(s[pos]);
-		pos++;
+		ft_print_char(s[i]);
+		i++;
 	}
-	return (pos);
+	return (i);
 }

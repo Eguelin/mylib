@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:40:28 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:22:57 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:13:26 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	pos;
+	size_t	i;
 
-	pos = 0;
-	while (pos < len)
+	i = 0;
+	while (i < len)
 	{
-		((unsigned char *)b)[pos] = c;
-		pos++;
+		((unsigned char *)b)[i] = c;
+		i++;
 	}
 	return (b);
 }

@@ -6,7 +6,7 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:04:38 by eguelin           #+#    #+#             */
-/*   Updated: 2023/02/15 17:24:00 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2023/04/18 18:15:00 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	pos;
+	size_t	i;
 
-	pos = 0;
-	while (s[pos])
+	i = 0;
+	while (s[i])
 	{
-		if (s[pos] == (char)c)
-			return ((char *)(s + pos));
-		pos++;
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i++;
 	}
-	if (s[pos] == (char)c)
-		return ((char *)(s + pos));
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
 	return (NULL);
 }
