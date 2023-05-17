@@ -3,5 +3,6 @@ a.out*
 *.gch
 *.o
 *.a
+main.c
 build
 
