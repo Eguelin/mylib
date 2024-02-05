@@ -6,18 +6,19 @@
 /*   By: eguelin <eguelin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:54:43 by eguelin           #+#    #+#             */
-/*   Updated: 2023/06/16 09:50:40 by eguelin          ###   ########lyon.fr   */
+/*   Updated: 2024/01/15 18:55:41 by eguelin          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MYLIB_H
 # define MYLIB_H
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
 # include <stdarg.h>
 
-# define BUFFER_SIZE 10
+# define BUFFER_SIZE 1024
 
 typedef struct s_list
 {

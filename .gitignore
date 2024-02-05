@@ -1,8 +1,6 @@
-a.out*
-.DS_Store
+*.out
 *.gch
 *.o
 *.a
+*.obj
 main.c
-build
-
